@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Command Injection Demo</title>
+    <script>
+        async function executeCommand(mode = 'default') {
+            let endpoint = '/execute';
+            switch (mode) {
+                case 'words': 
+                    endpoint = '/executeCheckWords';
+                    break;
+                case 'chars':
+                    endpoint = '/executeCheckChars';
+                    break;
+            }
+    
+            const commandInput = document.getElementById('command');
+            const outputDiv = document.getElementById('output');
+    
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `command=${encodeURIComponent(commandInput.value)}`
+                });
+    
+                const text = await response.text();
+                outputDiv.textContent = text;
+            } catch (error) {
+                outputDiv.textContent = 'Error occurred while executing command.';
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Command Injection Demo</h1>
+    <div class="form-group">
+        <label for="command">Enter Command:</label>
+        <input type="text" class="form-control" id="command">
+    </div>
+        <button onclick="executeCommand()" class="btn btn-success">Execute 1</button>
+        <button onclick="executeCommand('words')" class="btn btn-success">Execute 2</button>
+        <button onclick="executeCommand('chars')" class="btn btn-success">Execute 3</button>
+    <hr>
+    <div id="output" class="mt-3"></div>
+</div>
+</body>
+</html>
