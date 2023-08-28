@@ -1,5 +1,7 @@
 # ctf-commandinjection
 
+This app is obviously not secure and not suitable for production environments, etc.
+
 ## Setup
 
 ```
