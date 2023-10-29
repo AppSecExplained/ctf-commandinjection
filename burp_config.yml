@@ -1,0 +1,24 @@
+enterpriseServer:
+  url: http://localhost:8080 # Replace this with your Burp Suite Enterprise server URL
+  apiKey: lmvg37G8U25yxKSQRhsRwVw5Q9EbZUDl # Replace this with your API key
+  # Add the TLS certificate if needed
+
+site:
+  correlationId: CommandInjectionAppScan
+  startUrls: 
+    - http://localhost:3000/ # Assuming your app runs on localhost port 3000 when you launch it via Jenkins.
+
+scanConfigurations:
+  builtIn: 
+    - Crawl and Audit - CICD optimized # This is a generic crawl & audit setting which might be good for a start.
+
+logins:
+  # If your app requires authentication, set up the login credentials or recorded sequences. If it doesn't, you can ignore this part.
+
+reporting:
+  reportFormats:
+    - JUNIT
+  threshold:    
+    minimumSeverity: LOW
+    minimumConfidence: TENTATIVE
+    enabled: true
