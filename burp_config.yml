@@ -6,11 +6,11 @@ enterpriseServer:
 site:
   correlationId: CommandInjectionAppScan
   startUrls: 
-    - http://localhost:3000/ # Assuming your app runs on localhost port 3000 when you launch it via Jenkins.
+    - http://localhost:3000/
 
 scanConfigurations:
   builtIn: 
-    - Crawl and Audit - CICD optimized # This is a generic crawl & audit setting which might be good for a start.
+    - Crawl and Audit - CICD optimized
 
 logins:
   # If your app requires authentication, set up the login credentials or recorded sequences. If it doesn't, you can ignore this part.
