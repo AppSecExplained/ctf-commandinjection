@@ -1,6 +1,6 @@
 enterpriseServer:
-  url: http://10.10.100.151:8080 # Replace this with your Burp Suite Enterprise server URL
-  apiKey: lmvg37G8U25yxKSQRhsRwVw5Q9EbZUDl # Replace this with your API key
+  url: http://10.10.100.151:8080
+  apiKey: lmvg37G8U25yxKSQRhsRwVw5Q9EbZUDl
   # Add the TLS certificate if needed
 
 site:
