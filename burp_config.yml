@@ -10,7 +10,7 @@ site:
 
 scanConfigurations:
   builtIn: 
-    - Crawl and Audit - CICD optimized
+    - Crawl and Audit
 
 logins:
   # If your app requires authentication, set up the login credentials or recorded sequences. If it doesn't, you can ignore this part.
