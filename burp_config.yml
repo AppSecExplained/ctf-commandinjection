@@ -10,7 +10,7 @@ site:
 
 scanConfigurations:
   builtIn: 
-    - Audit checks - light active
+    - Crawl and Audit - Balanced
 
 reporting:
   reportFormats:
