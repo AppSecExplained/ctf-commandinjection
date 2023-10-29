@@ -10,7 +10,7 @@ site:
 
 scanConfigurations:
   builtIn: 
-    - Crawl and Audit - CICD optimized
+    - Audit checks - all except JavaScript analysis
 
 reporting:
   reportFormats:
