@@ -16,6 +16,6 @@ reporting:
   reportFormats:
     - JUNIT
   threshold:    
-    minimumSeverity: LOW
-    minimumConfidence: TENTATIVE
+    minimumSeverity: HIGH
+    minimumConfidence: FIRM
     enabled: true
