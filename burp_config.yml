@@ -6,7 +6,7 @@ enterpriseServer:
 site:
   correlationId: CommandInjectionAppScan
   startUrls: 
-    - http://localhost:3000/
+    - http://10.10.100.151:3000/
 
 scanConfigurations:
   builtIn: 
