@@ -37,6 +37,8 @@ pipeline {
             sh '''
                 pkill -f "node server.js"
             '''
+            junit testResults: 'burp_junit_report.xml', skipPublishingChecks: true, skipMarkingBuildUnstable: true, allowEmptyResults: true
+                cleanWs()
         }
     }
 }
