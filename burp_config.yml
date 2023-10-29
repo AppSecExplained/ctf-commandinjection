@@ -10,7 +10,7 @@ site:
 
 scanConfigurations:
   builtIn: 
-    - Audit checks - all except JavaScript analysis
+    - Audit checks - light active
 
 reporting:
   reportFormats:
